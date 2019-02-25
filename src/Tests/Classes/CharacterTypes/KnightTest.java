@@ -1,4 +1,4 @@
-package Tests.Classes;
+package Tests.Classes.CharacterTypes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
