@@ -87,25 +87,6 @@ public abstract class Character {
 		this.isAlive = isAlive;
 	}
 
-	// These were with in knight class only, keeping them here to make sure
-	// We do or dont need them.
-
-	public void setPhysical(int physical) {
-		Physical = physical;
-	}
-
-	public void setIntelligence(int intelligence) {
-		Intelligence = intelligence;
-	}
-
-	public void setDefense(int defense) {
-		Defense = defense;
-	}
-
-	public void setSpecialName(String specialName) {
-		SpecialName = specialName;
-	}
-
 	public void setStatusesSet(ArrayList<Statuses> statusesSet) {
 		StatusesSet = statusesSet;
 	}
