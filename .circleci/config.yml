@@ -11,6 +11,8 @@ jobs:
 
       - checkout
 
+      - run : ll
+
       - restore_cache:
           key: circleci-test-java-{{ checksum "pom.xml" }}
       
