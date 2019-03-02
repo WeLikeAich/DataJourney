@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @SuiteDisplayName("Character Type Test Suite")
-@SelectPackages("test.java.Classes.CharacterTypes")
+@SelectPackages("test.java.classes.characterTypes")
 public class CharacterTypeTestSuite {
 
 }
