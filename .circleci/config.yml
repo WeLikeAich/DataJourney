@@ -14,14 +14,14 @@ jobs:
       - restore_cache:
           key: circleci-test-java-{{ checksum "pom.xml" }}
       
-      - run: mvn -X dependency:go-offline
+      - run: mvn dependency:go-offline
       
       - save_cache:
           paths:
             - ~/.m2
           key: circleci-test-java-{{ checksum "pom.xml" }}
       
-      - run: mvn package
+      - run: mvn -X package
       
       - store_test_results:
           path: target/surefire-reports
