@@ -2,12 +2,10 @@ package tests.classes.characterTypes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import main.enums.Statuses;
 import main.models.Knight;
 import main.models.Monk;
 import main.models.Priest;
