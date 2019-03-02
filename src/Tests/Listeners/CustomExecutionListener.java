@@ -1,4 +1,4 @@
-package Tests.Listeners;
+package tests.listeners;
 
 import org.junit.runner.Description;
 import org.junit.runner.Result;
