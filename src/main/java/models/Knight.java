@@ -1,6 +1,6 @@
-package main.models;
+package main.java.models;
 
-import main.enums.Statuses;
+import main.java.enums.Statuses;
 
 public class Knight extends Character {
 

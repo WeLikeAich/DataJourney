@@ -1,8 +1,8 @@
-package main.models;
+package main.java.models;
 
 import java.util.ArrayList;
 
-import main.enums.Statuses;
+import main.java.enums.Statuses;
 
 public abstract class Character {
 
