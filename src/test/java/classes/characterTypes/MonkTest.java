@@ -1,17 +1,15 @@
-package Tests.Classes.CharacterTypes;
+package test.java.classes.characterTypes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.AfterClass;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import Models.Knight;
-import Models.Monk;
-import Models.Priest;
-import Models.Rogue;
-import enums.Statuses;
+import main.java.enums.Statuses;
+import main.java.models.Knight;
+import main.java.models.Monk;
+import main.java.models.Priest;
+import main.java.models.Rogue;
 
 @DisplayName("Monk")
 public class MonkTest {
@@ -152,6 +150,130 @@ public class MonkTest {
 		
 		test.takeDamage(10);
 		
+		assertEquals(test.getMaxHealth(), test.getHealth());
+	}
+	
+	@Test
+	public void testKnight() {
+		Knight test = new Knight();
+
+		assertEquals("Knight", test.getName());
+	}
+
+	@Test
+	public void testKnightString() {
+		String knightName = "knightName";
+		Knight test = new Knight(knightName);
+
+		assertEquals(knightName, test.getName());
+	}
+
+	@Test
+	public void testAttackKnight2() {
+		Knight test = new Knight();
+		Knight target = new Knight();
+
+		test.attack(target);
+
+		assertEquals(target.getMaxHealth(), target.getHealth());
+	}
+
+	@Test
+	public void testAttackPriest2() {
+		Knight test = new Knight();
+		Priest target = new Priest();
+
+		test.attack(target);
+
+		assertEquals(93, target.getHealth());
+	}
+
+	@Test
+	public void testAttackRogue2() {
+		Knight test = new Knight();
+		Rogue target = new Rogue();
+
+		test.attack(target);
+
+		assertEquals(75, target.getHealth());
+	}
+
+	@Test
+	public void testAttackMonk2() {
+		Knight test = new Knight();
+		Monk target = new Monk();
+
+		test.attack(target);
+
+		assertEquals(116, target.getHealth());
+	}
+
+	@Test
+	public void testUseSpecialKnight() {
+		Knight test = new Knight();
+		Knight target = new Knight();
+
+		test.useSpecial(target);
+
+		assertEquals(true, target.getStatusesSet().contains(Statuses.StoneWall));
+	}
+
+	@Test
+	public void testUseSpecialPriest() {
+		Knight test = new Knight();
+		Priest target = new Priest();
+
+		test.useSpecial(target);
+
+		assertEquals(true, target.getStatusesSet().contains(Statuses.StoneWall));
+	}
+
+	@Test
+	public void testUseSpecialRogue() {
+		Knight test = new Knight();
+		Rogue target = new Rogue();
+
+		test.useSpecial(target);
+
+		assertEquals(true, target.getStatusesSet().contains(Statuses.StoneWall));
+	}
+
+	@Test
+	public void testUseSpecialMonk1() {
+		Knight test = new Knight();
+		Monk target = new Monk();
+
+		test.useSpecial(target);
+
+		assertEquals(true, target.getStatusesSet().contains(Statuses.StoneWall));
+	}
+
+	@Test
+	public void testTakeDamageNoShieldWallGreaterThanDefense1() {
+		Knight test = new Knight();
+
+		test.takeDamage(20);
+
+		assertEquals(110, test.getHealth());
+	}
+
+	@Test
+	public void testTakeDamageNoShieldWallLessThanEqualToDefense1() {
+		Knight test = new Knight();
+
+		test.takeDamage(10);
+
+		assertEquals(test.getMaxHealth(), test.getHealth());
+	}
+
+	@Test
+	public void testTakeDamageWithShieldWall2() {
+		Knight test = new Knight();
+
+		test.useSpecial(test);
+
+		test.takeDamage(10);
+
 		assertEquals(test.getMaxHealth(), test.getHealth());
 	}
 }

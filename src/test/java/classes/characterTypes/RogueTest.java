@@ -1,17 +1,14 @@
-package Tests.Classes.CharacterTypes;
+package test.java.classes.characterTypes;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.AfterClass;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import Models.Knight;
-import Models.Monk;
-import Models.Priest;
-import Models.Rogue;
-import enums.Statuses;
+import main.java.models.Knight;
+import main.java.models.Monk;
+import main.java.models.Priest;
+import main.java.models.Rogue;
 
 @DisplayName("Rogue")
 public class RogueTest {

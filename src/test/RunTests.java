@@ -1,9 +1,10 @@
+package test;
+
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 
-import Tests.Listeners.CustomExecutionListener;
-import Tests.Suites.CharacterTypeTestSuite;
-
+import test.java.listeners.CustomExecutionListener;
+import test.java.suites.CharacterTypeTestSuite;
 
 public class RunTests {
 	public static void main(String[] args) {
