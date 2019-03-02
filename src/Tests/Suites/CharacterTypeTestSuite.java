@@ -1,4 +1,4 @@
-package Tests.Suites;
+package tests.suites;
 
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.platform.suite.api.SelectPackages;
