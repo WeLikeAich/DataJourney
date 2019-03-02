@@ -1,27 +1,8 @@
 version: 2
 jobs:
   build:
-    working_directory :~/circleci-build-directory
-    
     docker:
-      - image: circleci/openjdk:8-jdk-browsers
-      
+      - image: circleci/ruby:2.4.1
     steps:
-    
       - checkout
-      
-      - restore_cache:
-        key: test-java-maven-{{ checksum "pom.xml" }}
-        
-      - run: mvn dependency:go-offline
-      
-      - save_cache:
-        key: test-java-maven-{{ checksum "pom.xml" }}
-        
-      - run: mvn package
-      
-      -store_test_results:
-        path: target/surefire-reports
-        
-      - store_artifacts:
-        path: target/test-java-maven-0.0.1-SNAPSHOT.jar
+      - run: echo "A first hello"
