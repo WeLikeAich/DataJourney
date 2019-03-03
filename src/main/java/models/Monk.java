@@ -28,9 +28,9 @@ public class Monk extends Character {
 
 	}
 
-	public boolean useSpecial() {
-		if (!StatusesSet.contains(Statuses.Focus))
-			StatusesSet.add(Statuses.Focus);
+	public boolean useSpecial(Character target) {
+		if (!target.getStatusesSet().contains(Statuses.Focus))
+			target.getStatusesSet().add(Statuses.Focus);
 
 		return true;
 	}

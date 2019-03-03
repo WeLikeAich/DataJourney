@@ -35,7 +35,9 @@ public abstract class Character {
 	}
 
 	public abstract boolean attack(Character target);
-
+	
+	public abstract boolean useSpecial(Character target);
+	
 	public void takeDamage(int attackAmount) {
 		if (StatusesSet.contains(Statuses.StoneWall)) {
 			StatusesSet.remove(Statuses.StoneWall);

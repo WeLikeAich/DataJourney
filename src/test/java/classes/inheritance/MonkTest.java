@@ -1,4 +1,4 @@
-package test.java.classes.characterTypes;
+package test.java.classes.inheritance;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -116,10 +116,41 @@ public class MonkTest {
 	@Test
 	public void testUseSpecialMonk() {
 		Monk test = new Monk();
+		Monk target = new Monk();
 		
-		test.useSpecial(test);
+		test.useSpecial(target);
 		
-		assertEquals(true, test.getStatusesSet().contains(Statuses.Focus));
+		assertEquals(true, target.getStatusesSet().contains(Statuses.Focus));
+	}
+	
+	@Test
+	public void testUseSpecialKnight() {
+		Monk test = new Monk();
+		Knight target = new Knight();
+		
+		test.useSpecial(target);
+		
+		assertEquals(true, target.getStatusesSet().contains(Statuses.Focus));
+	}
+	
+	@Test
+	public void testUseSpecialPriest() {
+		Monk test = new Monk();
+		Priest target = new Priest();
+		
+		test.useSpecial(target);
+		
+		assertEquals(true, target.getStatusesSet().contains(Statuses.Focus));
+	}
+	
+	@Test
+	public void testUseSpecialRogue() {
+		Monk test = new Monk();
+		Rogue target = new Rogue();
+		
+		test.useSpecial(target);
+		
+		assertEquals(true, target.getStatusesSet().contains(Statuses.Focus));
 	}
 
 	@Test
