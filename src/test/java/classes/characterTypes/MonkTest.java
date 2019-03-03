@@ -74,7 +74,7 @@ public class MonkTest {
 		Monk test = new Monk();
 		Knight target = new Knight();
 		
-		test.useSpecial();
+		test.useSpecial(test);
 		test.attack(target);
 		
 		assertEquals(105, target.getHealth());
@@ -85,7 +85,7 @@ public class MonkTest {
 		Monk test = new Monk();
 		Priest target = new Priest();
 		
-		test.useSpecial();
+		test.useSpecial(test);
 		test.attack(target);
 		
 		assertEquals(78, target.getHealth());
@@ -96,7 +96,7 @@ public class MonkTest {
 		Monk test = new Monk();
 		Rogue target = new Rogue();
 		
-		test.useSpecial();
+		test.useSpecial(test);
 		test.attack(target);
 		
 		assertEquals(60, target.getHealth());
@@ -107,7 +107,7 @@ public class MonkTest {
 		Monk test = new Monk();
 		Monk target = new Monk();
 		
-		test.useSpecial();
+		test.useSpecial(test);
 		test.attack(target);
 		
 		assertEquals(101, target.getHealth());
@@ -117,7 +117,7 @@ public class MonkTest {
 	public void testUseSpecialMonk() {
 		Monk test = new Monk();
 		
-		test.useSpecial();
+		test.useSpecial(test);
 		
 		assertEquals(true, test.getStatusesSet().contains(Statuses.Focus));
 	}
