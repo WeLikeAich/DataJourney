@@ -1,10 +1,13 @@
 package main.java.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import main.java.enums.Statuses;
 
-public class Character {
+
+public class Character implements Serializable {
+
 
 	public String Name;
 	public int MaxHealth;
