@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import main.java.enums.Statuses;
 
-public abstract class Character {
+public class Character {
 
 	public String Name;
 	public int MaxHealth;
@@ -34,9 +34,13 @@ public abstract class Character {
 		return true;
 	}
 
-	public abstract boolean attack(Character target);
+	public boolean attack(Character target) {
+		return false;
+	}
 	
-	public abstract boolean useSpecial(Character target);
+	public boolean useSpecial(Character target) {
+		return false;
+	}
 	
 	public void takeDamage(int attackAmount) {
 		if (StatusesSet.contains(Statuses.StoneWall)) {
