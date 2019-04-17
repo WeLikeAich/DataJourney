@@ -20,7 +20,7 @@ public class Knight extends Character {
 
 	public boolean attack(Character target) {
 
-		if (attack(target, Physical)) {
+		if (attack(target, Health)) {
 			return true;
 		}
 
